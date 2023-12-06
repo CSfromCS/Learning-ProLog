@@ -1,0 +1,19 @@
+consult('firm1.pl'),consult('firm2.pl').
+
+% a. Projects are either marked as ongoing or completed. What is the status of proj3? [answer: ongoing]
+projStatus(proj3, S),!.
+
+% b. Who is the head of the marketing department [answer: mike]
+deptHead(marketing, E),!.
+
+% c. A busy department is a department that has employees, and all of its employees are assigned to projects. Is the marketing department busy? [answer: true]
+busyDept(marketing),!.
+
+% d. Is the sales department busy? [answer: false]
+busyDept(sales),!.
+
+% e. An efficient employee is one who has projects assigned and the projects are all completed (not ongoing). Is jack efficient? [answer: false]
+efficientEmployee(jack),!.
+
+% f. Is martha efficient? [answer: true]
+efficientEmployee(martha),!.

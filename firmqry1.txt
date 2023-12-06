@@ -1,0 +1,38 @@
+consult('firm1.pl').
+
+% a. Is martha an employee?
+employee(martha),!.
+
+% b. List all employees.
+employee(E).
+
+% c. List all those under the marketing department.
+departmentOf(E, marketing).
+
+% d. Are julia and jack under the same department?
+sameDept(julia, jack),!.
+
+% e. Are julia and martha under the same department?
+sameDept(julia, martha),!.
+
+% f. Is john assigned to proj2?
+projectOf(john, proj2),!.
+
+% g. List all projects assigned to martha.
+projectOf(martha, P).
+
+% h. Are martha and josh assigned to the same project?
+sameProj(martha, josh),!.
+
+% i. Who are the employees assigned to proj1?
+projectOf(E,proj1).
+
+% j. Which departments have employees assigned to projects?
+deptWProj(D).
+
+% k. Does the marketing department have employees?
+% assumes that those in departmentOf(E,D) are all employees only, which they are.
+departmentOf(_,marketing),!.
+
+% l. Does the accounting department have employees?
+departmentOf(_,accounting),!.
